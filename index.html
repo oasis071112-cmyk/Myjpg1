@@ -2,28 +2,33 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>点击图片跳转示例</title>
 
   <!-- Twitter Card 设置 -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="点击图片跳转示例">
   <meta name="twitter:description" content="点击图片即可跳转到指定页面">
   <meta name="twitter:image" content="https://oasis071112-cmyk.github.io/Myjpg1/images/KT.png">
-  <meta name="twitter:url" content="http://geng.one">
 
-  <!-- Open Graph 设置（Facebook/其他平台也能识别） -->
+  <!-- Open Graph 设置 -->
   <meta property="og:title" content="点击图片跳转示例">
   <meta property="og:description" content="点击图片即可跳转到指定页面">
   <meta property="og:image" content="https://oasis071112-cmyk.github.io/Myjpg1/images/KT.png">
-  <meta property="og:url" content="http://geng.one">
 </head>
 <body>
   <h1>点击图片跳转示例</h1>
-  <p>点击下面图片即可跳转到 <a href="http://geng.one" target="_blank">geng.one</a></p>
+  <p>如果浏览器打开页面，会自动跳转到 <a href="http://geng.one">geng.one</a></p>
 
   <!-- 页面中显示点击跳转图片 -->
   <a href="http://geng.one" target="_blank">
     <img src="https://oasis071112-cmyk.github.io/Myjpg1/images/KT.png" alt="点击跳转图片" width="600">
   </a>
+
+  <!-- 自动跳转脚本 -->
+  <script>
+    // 页面加载后1秒自动跳转到目标网址
+    setTimeout(function() {
+      window.location.href = "http://geng.one";
+    }, 1000); // 延迟1秒，让卡片能正常抓取
+  </script>
 </body>
 </html>
